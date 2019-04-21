@@ -17,3 +17,4 @@ App has following dependencies. Run *pip install* for the following packages.
 - PIL
 - Tkinter (Pre installed with Python)
 - threading (Pre installed with Python)
+- os (Pre installed with Python)

@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 import tkinter as tk
 from PIL import ImageTk, Image
+import os
 
 size = 15
 kernel_motion_blur = np.zeros((size, size))
@@ -211,7 +212,10 @@ class FilterApp(object):
 
 
 	def saveFilteredImage(self):
-		
+
+		if not os.path.exists('savedImages/'):
+			os.makedirs('savedImages/')
+
 		filename = "savedImages/{}.jpg".format(self.currentfilter)
 		cv2.imwrite(filename, self.image)
 
